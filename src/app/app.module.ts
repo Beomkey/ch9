@@ -10,6 +10,7 @@ import { GeocodeServiceProvider } from '../providers/geocode-service/geocode-ser
 import { WeatherPage } from '../pages/weather/weather';
 import { LocationsPage } from '../pages/locations/locations'; 
 import { Geolocation } from '@ionic-native/geolocation';
+import { LocationsServiceProvider } from '../providers/locations-service/locations-service';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     Geolocation,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     WeatherServiceProvider,
-    GeocodeServiceProvider]
+    GeocodeServiceProvider,
+    LocationsServiceProvider]
 })
 export class AppModule { }
