@@ -4,13 +4,6 @@ import { WeatherServiceProvider } from '../../providers/weather-service/weather-
 import { Geolocation } from '@ionic-native/geolocation';
 import { CurrentLoc } from '../../interfaces/current-loc';
 
-/**
- * Generated class for the WeatherPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-weather',
@@ -57,5 +50,4 @@ export class WeatherPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad WeatherPage');
   }
-
 }
