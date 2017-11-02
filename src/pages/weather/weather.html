@@ -1,0 +1,42 @@
+<!--
+  Generated template for the WeatherPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Current Location</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-grid *ngIf="currentData.temperature != undefine">
+  <ion-row>
+    <ion-col col-12>
+      <h1>{{currentData.temperature | number: '.0-0'}}&deg;</h1>
+      <p>{{currentData.summary}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-4>
+      {{day1.temperatureMax | number: '.0-0'}}&deg;<br>
+      {{day1.temperatureMin | number: '.0-0'}}&deg;
+    </ion-col>
+    <ion-col col-4>
+      {{day2.temperatureMax | number: '.0-0'}}&deg;<br>
+      {{day2.temperatureMin | number: '.0-0'}}&deg;
+    </ion-col>
+    <ion-col col-4>
+      {{day2.temperatureMax | number: '.0-0'}}&deg;<br>
+      {{day2.temperatureMin | number: '.0-0'}}&deg;
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

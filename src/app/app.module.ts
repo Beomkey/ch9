@@ -3,16 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { WeatherServiceProvider } from '../providers/weather-service/weather-service';
+import { GeocodeServiceProvider } from '../providers/geocode-service/geocode-service';
+import { WeatherPage } from '../pages/weather/weather';
+import { LocationsPage } from '../pages/locations/locations'; 
 
 @NgModule({
   declarations: [
     MyApp,
-    Page1,
-    Page2
+    WeatherPage,
+    LocationsPage
   ],
   imports: [
     BrowserModule,
@@ -22,12 +24,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    Page1,
-    Page2
+    WeatherPage,
+    LocationsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }]
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    WeatherServiceProvider,
+    GeocodeServiceProvider]
 })
 export class AppModule { }
