@@ -25,27 +25,27 @@
       refreshingText="Refreshing...">
     </ion-refresher-content>
   </ion-refresher>
-<ion-grid *ngIf="currentData.temperature != undefine">
-  <ion-row>
-    <ion-col col-12>
-      <h1>{{currentData.temperature | number: '.0-0'}}&deg;</h1>
-      <p>{{currentData.summary}}</p>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col col-4>
-      {{day1.temperatureMax | number: '.0-0'}}&deg;<br>
-      {{day1.temperatureMin | number: '.0-0'}}&deg;
-    </ion-col>
-    <ion-col col-4>
-      {{day2.temperatureMax | number: '.0-0'}}&deg;<br>
-      {{day2.temperatureMin | number: '.0-0'}}&deg;
-    </ion-col>
-    <ion-col col-4>
-      {{day2.temperatureMax | number: '.0-0'}}&deg;<br>
-      {{day2.temperatureMin | number: '.0-0'}}&deg;
-    </ion-col>
-  </ion-row>
-</ion-grid>
+  <ion-grid *ngIf="currentData.temperature != undefine">
+    <ion-row>
+      <ion-col col-12>
+        <h1>{{currentData.temperature | number: '.0-0'}}&deg;</h1>
+        <p>{{currentData.summary}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        {{day1.temperatureMax | number: '.0-0'}}&deg;<br>
+        {{day1.temperatureMin | number: '.0-0'}}&deg;
+      </ion-col>
+      <ion-col col-4>
+        {{day2.temperatureMax | number: '.0-0'}}&deg;<br>
+        {{day2.temperatureMin | number: '.0-0'}}&deg;
+      </ion-col>
+      <ion-col col-4>
+        {{day2.temperatureMax | number: '.0-0'}}&deg;<br>
+        {{day2.temperatureMin | number: '.0-0'}}&deg;
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
